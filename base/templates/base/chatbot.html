@@ -1,0 +1,46 @@
+<!--<div class="chat-container">
+    <div id="conversation-thread" class="conversation-thread"></div>
+    <input type="text" id="user-message" placeholder="Type a message" />
+    <button id="send-button">Send</button>
+</div>-->
+
+<div class="chat-container" style="
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 300px;
+    max-height: 400px;
+    background-color: #f1f1f1;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Arial, sans-serif;
+">
+    <div id="conversation-thread" class="conversation-thread" style="
+        padding: 10px;
+        flex-grow: 1;
+        overflow-y: auto;
+    "></div>
+    <div style="display: flex; border-top: 1px solid #ddd;">
+        <input type="text" id="user-message" placeholder="Type a message" style="
+            flex: 1;
+            padding: 8px;
+            border: none;
+            outline: none;
+            border-radius: 0 0 0 10px;
+        "/>
+        <button id="send-button" style="
+            padding: 8px 12px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 0 0 10px 0;
+        ">Send</button>
+    </div>
+</div>

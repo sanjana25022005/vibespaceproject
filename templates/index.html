@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Celery Task Trigger</title>
+</head>
+<body>
+    <button onclick="triggerTask()">Run Celery Task</button>
+
+    <script>
+    function triggerTask() {
+        fetch('/run-task/')
+            .then(response => response.json())
+            .then(data => {
+                console.log('Task triggered:', data);
+            });
+    }
+    </script>
+</body>
+</html>

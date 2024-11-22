@@ -1,0 +1,13 @@
+<!-- templates/goal_list.html -->
+<h1>Your Goals</h1>
+<a href="{% url 'goal_create' %}">Create New Goal</a>
+{% for goal in goals %}
+    <h2>{{ goal.title }} ({{ goal.progress }}% Complete)</h2>
+    <p>{{ goal.description }}</p>
+    <a href="{% url 'task_create' goal.id %}">Add Task</a>
+    <ul>
+        {% for task in goal.tasks.all %}
+            <li>{{ task.title }} - Due: {{ task.due_date }} - {{ task.priority }}</li>
+        {% endfor %}
+    </ul>
+{% endfor %}

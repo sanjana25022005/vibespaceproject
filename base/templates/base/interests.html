@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeSpace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Interest Form -->
+    <div id="interest-container" class="container">
+        <h1>VibeSpace Interests</h1>
+        <form id="interest-form">
+            <input type="text" id="interest-input" placeholder="Enter your interests (comma-separated)" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+    <!-- Hidden Form for Notifications via Formspree -->
+    <form id="notificationForm" action="https://formspree.io/f/xgveyvey" method="POST" class="hidden">
+        <input type="email" name="email" id="notificationEmail" placeholder="User Email">
+        <input type="text" name="subject" id="notificationSubject" value="New Room Notification">
+        <textarea name="message" id="notificationMessage">A new room has been created for a topic you're interested in!</textarea>
+        <button type="submit">Send Notification</button>
+    </form>

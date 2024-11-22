@@ -1,0 +1,18 @@
+<!-- base/dashboard.html -->
+{% extends 'base/main.html' %}
+
+{% block content %}
+<h2>Welcome to the Dashboard</h2>
+
+<div>
+    <h3>Choose a Room Type:</h3>
+    <ul>
+        <li>
+            <a href="{% url 'home' %}">Live Interactive Rooms</a> 
+        </li>
+        <li>
+            <a href="{% url 'focus-room-dashboard' %}">Focus Rooms</a> 
+        </li>
+    </ul>
+</div>
+{% endblock %}

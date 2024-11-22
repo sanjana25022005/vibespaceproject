@@ -1,0 +1,7 @@
+<!-- templates/goal_form.html -->
+<h1>Create a Goal</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save Goal</button>
+</form>

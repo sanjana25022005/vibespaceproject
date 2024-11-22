@@ -1,0 +1,7 @@
+<!-- templates/task_form.html -->
+<h1>Add a Task</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save Task</button>
+</form>
