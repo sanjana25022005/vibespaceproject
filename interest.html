@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeSpace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sign-In Form -->
+    <div id="auth-container" class="container">
+        <h1>VibeSpace</h1>
+        <h2>Sign In</h2>
+        <form id="signin-form">
+            <input type="text" id="signin-username" placeholder="Enter your username" required>
+            <input type="password" id="signin-password" placeholder="Enter your password" required>
+            <button type="submit">Sign In</button>
+        </form>
+        <p>Don't have an account? <a href="#" onclick="showSignUp()">Sign Up</a></p>
+    </div>
+
+    <!-- Sign-Up Form -->
+    <div id="signup-container" class="container hidden">
+        <h1>VibeSpace</h1>
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+            <input type="text" id="signup-username" placeholder="Create a username" required>
+            <input type="email" id="signup-email" placeholder="Enter your email" required>
+            <input type="password" id="signup-password" placeholder="Create a password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <button onclick="showSignIn()">Already have an account? Sign In</button>
+    </div>
+
+    <!-- Interest Form -->
+    <div id="interest-container" class="container hidden">
+        <h1>VibeSpace Interests</h1>
+        <form id="interest-form">
+            <input type="text" id="interest-input" placeholder="Enter your interests (comma-separated)" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Main VibeSpace Page (Dashboard) -->
+    <div id="main-container" class="container hidden">
+        <h1>Welcome to VibeSpace!</h1>
+        <p>Explore, learn, and grow together!</p>
+        <button id="create-room-btn">Create a Room</button>
+        <button id="focus-rooms-btn">Focus Rooms</button>
+        <br><br>
+        <button onclick="showHome()">Home</button>
+        <button onclick="showProgress()">Progress</button>
+        <button onclick="handleLogout()">Logout</button>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
